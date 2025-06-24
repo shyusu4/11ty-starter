@@ -1,3 +1,9 @@
 // Base
 @use 'base/base';
 @use 'base/fonts';
+
+// Components
+@use 'components/post-item';
+
+// Navigation
+@use 'components/navigation/header';

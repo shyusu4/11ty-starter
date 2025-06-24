@@ -1,0 +1,13 @@
+.header {
+  &__logo {
+    font-family: 'BenchNine', sans-serif;
+  }
+}
+
+.header-nav {
+  &__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+}
