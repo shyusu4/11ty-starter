@@ -1,0 +1,28 @@
+@use 'sass:color';
+
+// Colors
+$color--white: #fff;
+$color--black: #000;
+$color--gray: #f0f0f0;
+$color--light-gray: #efefef;
+$color--dark-gray: #333;
+
+:root {
+  --color--white: #{$color--white};
+  --color--black: #{$color--black};
+  --color--text: #{$color--black};
+  --color--light-background: #{$color--light-gray};
+  --color--dark-background: #{$color--dark-gray};
+  --color--link-underline: #{$color--gray};
+}
+
+// Fonts
+$font--heading: 'BenchNine', sans-serif;
+$font--body: 'Roboto Mono', sans-serif;
+
+// Spacing
+$spacing--xsmall: 15px;
+$spacing--small: 30px;
+$spacing--medium: 60px;
+$spacing--large: 90px;
+$spacing--xlarge: 120px;
