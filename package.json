@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "11ty starter project",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "sass": "npx sass --style=compressed src/assets/sass/style.scss src/assets/css/style.css",
     "watch:sass": "npm run sass -- --watch",
