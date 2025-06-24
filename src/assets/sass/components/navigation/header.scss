@@ -1,13 +1,13 @@
-.header {
-  &__logo {
-    font-family: 'BenchNine', sans-serif;
-  }
-}
+@use 'config' as *;
 
-.header-nav {
-  &__list {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--color--text);
+  background-color: var(--color--dark-background);
+
+  &__logo {
+    font-family: $font--heading;
   }
 }

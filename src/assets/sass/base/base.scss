@@ -1,3 +1,6 @@
+@use 'config' as *;
+@use 'sass:color';
+
 html {
   text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
@@ -10,7 +13,7 @@ html {
 }
 
 body {
-  font-family: 'Roboto Mono', sans-serif;
+  font-family: $font--body;
   overflow-x: hidden;
 }
 
