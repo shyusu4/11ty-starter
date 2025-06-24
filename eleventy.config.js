@@ -19,12 +19,9 @@ export default async function (eleventyConfig) {
     }
   });
 
-  // Copy the contents of the `public` folder to the output folder
-  // For example, `./public/css/` ends up in `_site/css/`
+  // Copy the contents of the `assets` folder to the output folder
   eleventyConfig
-    .addPassthroughCopy({
-      './public/': '/',
-    })
+    .addPassthroughCopy('src/assets')
     .addPassthroughCopy('./content/feed/pretty-atom-feed.xsl');
 
   // Run Eleventy when these files change:

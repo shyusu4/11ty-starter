@@ -1,0 +1,20 @@
+html {
+  text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+
+  @media (prefers-reduced-motion: reduce) {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  font-family: 'Roboto Mono', sans-serif;
+  overflow-x: hidden;
+}
+
+img,
+svg {
+  vertical-align: top;
+}
