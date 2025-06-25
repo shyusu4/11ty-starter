@@ -8,14 +8,14 @@ pagination:
 ---
 
 <div class="container">
-    <h1>{{ title }}</h1>
-    {{ content | safe }}
+  <h1>{{ title }}</h1>
+  {{ content | safe }}
 
-    <ul class="c-post-list">
-       {% for item in pagination.items %}
-            {% include "components/post-item.njk" %}
-        {% endfor %}
-    </ul>
+  <ul class="c-post-list">
+    {% for item in pagination.items %}
+      {% include "components/post-item.njk" %}
+    {% endfor %}
+  </ul>
 
-    {% include "components/pagination.njk" %}
+  {% include "components/pagination.njk" %}
 </div>
