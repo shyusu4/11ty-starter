@@ -23,3 +23,8 @@ img,
 svg {
   vertical-align: top;
 }
+
+a:link,
+a:visited {
+  color: currentColor;
+}
