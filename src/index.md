@@ -1,6 +1,6 @@
 ---
 layout: layouts/home.njk
-title: Home
+title: 11ty starter template
 ---
 
-Welcome to this 11ty starter template!
+Welcome to this very cool 11ty starter template!

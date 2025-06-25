@@ -6,4 +6,8 @@
 @use 'components/post-item';
 
 // Navigation
+@use 'components/navigation/skip-link';
 @use 'components/navigation/header';
+
+// Layout
+@use 'layout/container';

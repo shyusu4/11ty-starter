@@ -1,0 +1,21 @@
+{% if pagination.nextPageHref or pagination.previousPageHref %}
+  <nav class="pagination">
+    <div class="pagination__links">
+      {% if pagination.previousPageHref %}
+        <a class="pagination__previous" href="{{ pagination.previousPageHref }}">
+          <span>Previous</span>
+        </a>
+      {% endif %}
+        {% for page in pagination.pages %}
+            <a class="pagination__page{% if page.isCurrent %} pagination__page--current{% endif %}" href="{{ page.href }}">
+            <span>{{ page.number }}</span>
+            </a>
+        {% endfor %}
+      {% if pagination.nextPageHref %}
+        <a class="pagination__next" href="{{ pagination.nextPageHref }}">
+          <span>Next</span>
+        </a>
+      {% endif %}
+    </div>
+  </nav>
+{% endif %}

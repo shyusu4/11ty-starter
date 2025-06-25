@@ -1,7 +1,21 @@
 ---
 layout: layouts/base.njk
+pagination:
+  data: collections.posts
+  size: 3
+  alias: posts
+  reverse: true
 ---
 
-<h1>{{ title }}</h1>
-{{ content | safe }}
+<div class="container">
+    <h1>{{ title }}</h1>
+    {{ content | safe }}
 
+    <ul class="c-post-list">
+       {% for item in pagination.items %}
+            {% include "components/post-item.njk" %}
+        {% endfor %}
+    </ul>
+
+    {% include "components/pagination.njk" %}
+</div>
