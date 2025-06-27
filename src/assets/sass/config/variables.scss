@@ -11,9 +11,20 @@ $color--dark-gray: #333;
   --color--white: #{$color--white};
   --color--black: #{$color--black};
   --color--text: #{$color--black};
-  --color--light-background: #{$color--light-gray};
-  --color--dark-background: #{$color--dark-gray};
+  --color--background: #{$color--white};
   --color--link-underline: #{$color--gray};
+}
+
+[data-theme='dark'] {
+  --color--text: #{$color--white};
+  --color--background: #{$color--dark-gray};
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --color--text: #{$color--white};
+    --color--background: #{$color--dark-gray};
+  }
 }
 
 // Fonts
