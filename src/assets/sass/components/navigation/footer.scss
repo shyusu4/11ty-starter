@@ -1,0 +1,13 @@
+@use 'config' as *;
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: $spacing--xxs;
+  border-top: 1px solid var(--color--border);
+
+  @media (min-width: $breakpoint--s) {
+    flex-direction: row;
+  }
+}

@@ -1,5 +1,47 @@
 @use 'config' as *;
 
 .theme-switcher {
+  text-align: center;
+  width: fit-content;
   border: 0;
+
+  &__options {
+    display: flex;
+    align-items: center;
+  }
+
+  &__option {
+    label {
+      border: 2px solid;
+      border-radius: 2px;
+      font-size: 16px;
+      text-transform: uppercase;
+      padding: $spacing--xxs;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    input {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 0;
+
+      &:checked + label {
+        background-color: var(--color--invert-background);
+        border-color: var(--color--invert-background);
+        color: var(--color--invert-text);
+      }
+
+      &:focus {
+        outline: 0;
+      }
+
+      &:focus + label {
+        outline: 2px solid var(--color--invert-background);
+        outline-offset: 2px;
+      }
+    }
+  }
 }

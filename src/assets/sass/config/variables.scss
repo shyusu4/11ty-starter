@@ -3,27 +3,37 @@
 // Colors
 $color--white: #fff;
 $color--black: #000;
-$color--gray: #f0f0f0;
-$color--light-gray: #efefef;
-$color--dark-gray: #333;
+$color--gray-light: #d3d3d3;
+$color--gray: #606060;
+$color--gray-dark: #222;
 
 :root {
   --color--white: #{$color--white};
   --color--black: #{$color--black};
-  --color--text: #{$color--black};
+  --color--border: #{$color--gray-light};
+  --color--text: #{$color--gray-dark};
+  --color--text-accent: #{$color--gray-light};
+  --color--invert-text: #{$color--white};
   --color--background: #{$color--white};
-  --color--link-underline: #{$color--gray};
+  --color--invert-background: #{$color--gray-dark};
+}
+
+@mixin dark-theme {
+  --color--border: #{$color--gray};
+  --color--text: #{$color--white};
+  --color--text-accent: #{$color--gray};
+  --color--invert-text: #{$color--gray-dark};
+  --color--background: #{$color--gray-dark};
+  --color--invert-background: #{$color--white};
 }
 
 [data-theme='dark'] {
-  --color--text: #{$color--white};
-  --color--background: #{$color--dark-gray};
+  @include dark-theme;
 }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme='light']) {
-    --color--text: #{$color--white};
-    --color--background: #{$color--dark-gray};
+    @include dark-theme;
   }
 }
 
@@ -33,12 +43,19 @@ $font--body:
   -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu,
   Cantarell, 'Helvetica Neue', sans-serif;
 
-// Spacing
-$spacing--xsmall: 15px;
-$spacing--small: 30px;
-$spacing--medium: 60px;
-$spacing--large: 90px;
-$spacing--xlarge: 120px;
-
 // Layout
-$max-width: 800px;
+$max-width: 650px;
+
+// Spacing
+$spacing--xxs: 5px;
+$spacing--xs: 15px;
+$spacing--s: 30px;
+$spacing--m: 60px;
+$spacing--l: 90px;
+$spacing--xl: 120px;
+$spacing--xxl: 150px;
+
+// Breakpoints
+$breakpoint--s: 600px;
+$breakpoint--l: 1025px;
+$breakpoint--xl: 1280px;

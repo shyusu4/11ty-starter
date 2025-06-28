@@ -1,0 +1,8 @@
+@use 'config' as *;
+
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: $spacing--xs;
+  padding: $spacing--xs 0 $spacing--m;
+}

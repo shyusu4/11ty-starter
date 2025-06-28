@@ -13,8 +13,9 @@ html {
 }
 
 body {
-  margin: 0;
-  padding: 0;
+  padding: 0 $spacing--xs;
+  margin: 0 auto;
+  max-width: $max-width;
   background-color: var(--color--background);
   font-family: $font--body;
   overflow-x: hidden;
@@ -25,7 +26,17 @@ svg {
   vertical-align: top;
 }
 
-a:link,
+a,
 a:visited {
+  text-decoration-color: var(--color--text-accent);
   color: currentColor;
+}
+
+:focus {
+  outline-offset: 2px;
+  outline: 2px solid currentColor;
+}
+
+::marker {
+  color: var(--color--text-accent);
 }

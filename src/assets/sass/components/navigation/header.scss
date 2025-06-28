@@ -4,8 +4,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: $spacing--xs 0 $spacing--s;
 
   &__logo {
-    font-family: $font--heading;
+    text-decoration: none;
   }
 }
